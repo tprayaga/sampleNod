@@ -7,9 +7,9 @@ language: node_js
   #- elasticsearch
   #- mongodb
   #- rabbitmq
-  - neo4j
-  - couchdb
-  - rethinkdb
+  #- neo4j
+  #- couchdb
+  #- rethinkdb
 # Version number
 node_js:
   - 0.10
