@@ -7,9 +7,9 @@ services:
   - elasticsearch
   - mongodb
   - rabbitmq
-  - neo4j
-  - couchdb
-  - rethinkdb
+  #- neo4j
+  #- couchdb
+  #- rethinkdb
 # Version number
 node_js:
   - 0.10
@@ -26,6 +26,6 @@ build:
     - node --version
     
   pre_ci_boot:
-    image_name: drydock/u14nodall
+    image_name: drydock/u14nodpls
     image_tag: prod
     pull: true  
