@@ -1,5 +1,15 @@
 language: node_js
-
+#services:
+#- mysql
+  #- postgres
+  #- redis
+  #- memcache
+  #- elasticsearch
+  #- mongodb
+  #- rabbitmq
+  - neo4j
+  - couchdb
+  - rethinkdb
 # Version number
 node_js:
   - 0.10
@@ -15,7 +25,7 @@ build:
   ci:
     - node --version
     
-  #pre_ci_boot:
-  #  image_name: drydock/u14cloall
-    #image_tag: prod
-    #pull: true  
+  pre_ci_boot:
+    image_name: drydock/u12nodall
+    image_tag: prod
+    pull: true  
