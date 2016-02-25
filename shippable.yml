@@ -7,9 +7,7 @@ services:
   - elasticsearch
   - mongodb
   - rabbitmq
-  #- neo4j
-  #- couchdb
-  #- rethinkdb
+  
 
 # Version number
 node_js:
