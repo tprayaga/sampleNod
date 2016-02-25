@@ -1,0 +1,15 @@
+language: node_js
+
+# Version number
+node_js:
+  - 0.10
+  - 0.12
+  - 4.2.3
+  - iojs 1.0
+  - iojs 2.0
+
+
+build:
+  ci:
+    - node--version
+    
