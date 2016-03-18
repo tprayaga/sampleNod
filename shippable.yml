@@ -1,18 +1,29 @@
+# Language setting
 language: node_js
 
 # Version number
 node_js:
-  - 0.10
   - 0.12
-  - 4.2.3
-  - iojs-v1
-  - iojs-v2
-  - iojs-v3
-  - 5.0
-
 
 build:
+  pre_ci_boot:
+    image_name: drydock/u14nod
+    image_tag: prod
+    pull: true
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+
   ci:
-    - node --version
-    
-  
+    - npm install
+
+  pre_ci:
+    - echo "this is master branch"
+
+  post_ci:
+    - ls -a
+    - pwd
+
+  cache: true
+
+  cache_dir_list: 
+    - $SHIPPABLE_BUILD_DIR/node_modules
+
