@@ -12,11 +12,11 @@ build:
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
-  ci:
-    - npm install
-
   pre_ci:
     - echo "this is master branch"
+
+  ci:
+    - npm install
 
   post_ci:
     - ls -a
